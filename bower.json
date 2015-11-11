@@ -1,0 +1,25 @@
+{
+  "name": "Michel",
+  "description": "Michel's salon markup",
+  "main": "gulpfile.js",
+  "authors": [
+    "Taras Bilous <tbilous@yahoo.com>"
+  ],
+  "license": "MTI",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "Ionicons": "ionicons#~2.0.1",
+    "moment": "~2.10.6",
+    "flipclock": "~0.7.7",
+    "playfair-webfont": "~1.0.3"
+  }
+}
