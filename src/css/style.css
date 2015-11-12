@@ -5181,7 +5181,7 @@ a:focus, a:active, button:focus, button:active, input:focus, input:active, texta
 }
 
 .bold {
-  font-family: 'LatoWebBold', sans-serif;
+  font-weight: 700;
 }
 
 .normal-section {
@@ -5223,6 +5223,102 @@ a:focus, a:active, button:focus, button:active, input:focus, input:active, texta
   width: 1.2em;
   height: 1.2em;
   margin-top: .5em;
+}
+
+.collection-btn {
+  font-size: 1em;
+  height: 3em;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: white;
+  border-radius: 0;
+}
+.collection-btn:hover, .collection-btn:focus {
+  color: #eeeeee;
+}
+.collection-btn.btn-clear {
+  background-color: transparent;
+  border-color: white;
+}
+.collection-btn.btn-black {
+  background-color: #303030;
+  border-color: transparent;
+}
+
+.icon-hz {
+  background: url("../img/icons/icon-btn-hz.png") no-repeat center;
+}
+
+.icon-search {
+  background: url("../img/icons/icon-btn-search.png") no-repeat center;
+}
+
+.icon-star {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url("../img/icons/icon-star.png") center no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .feedback-modal {
+    font-size: 10px;
+  }
+}
+.feedback-modal .modal-header {
+  opacity: .8;
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.feedback-modal .modal-content {
+  border-radius: 3px;
+  padding: 1.5em;
+}
+.feedback-modal .modal-body {
+  box-shadow: 0 0 0 5px #5bc0de;
+  border-radius: 3px;
+}
+.feedback-modal .hidden-input {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  padding: 0;
+  position: absolute;
+  border: none;
+}
+.feedback-modal .input-group {
+  margin-bottom: .5em;
+  padding: .2em;
+  width: 100%;
+}
+.feedback-modal input[type='text'] {
+  border: 1px solid #eeeeee;
+}
+.feedback-modal input[type='text']:focus, .feedback-modal input[type='text']:active {
+  border-color: #5bc0de;
+}
+.feedback-modal .btn {
+  width: 80%;
+  margin-bottom: 1em;
+  font-style: normal;
+  height: 3em;
+  padding: 0;
+  line-height: 3em;
+}
+.feedback-modal input, .feedback-modal .message {
+  padding: 1em;
+  width: 80%;
+}
+.feedback-modal input[type="submit"] {
+  padding: 0;
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+.feedback-modal .message {
+  resize: none;
 }
 
 .section-advantages {
@@ -5269,6 +5365,95 @@ a:focus, a:active, button:focus, button:active, input:focus, input:active, texta
 }
 .section-advantages .jagged-line.bottom {
   bottom: 1em;
+}
+
+.collection-wrapper .collection-block {
+  width: 100%;
+  width: 19em;
+  height: 37em;
+  box-shadow: 0 0 0 1px #eeeeee;
+  margin: 1.3em auto;
+}
+.collection-wrapper .collection-block:nth-last-of-type(1)::after {
+  content: '';
+  display: block;
+}
+
+.model-name, .model-price {
+  margin: .5em 0;
+}
+
+.item-review {
+  padding: 1em;
+}
+
+.item-photo {
+  position: relative;
+  background-size: cover;
+}
+.item-photo .spacer {
+  padding-top: 150%;
+  font-size: 0;
+}
+.item-photo .photo-hover-block {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  padding-top: 60%;
+  opacity: 0;
+}
+.item-photo .photo-hover-block:hover, .item-photo .photo-hover-block:focus, .item-photo .photo-hover-block:active {
+  background-color: rgba(48, 48, 48, 0.6);
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  opacity: 1;
+}
+.item-photo .btn-header-action {
+  width: 70%;
+}
+.item-photo .collection-btn-group {
+  margin-top: 1em;
+}
+.item-photo .collection-btn-group .collection-btn {
+  width: 25%;
+  margin: 0 .5em;
+}
+.item-photo .star-line {
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.model-price li {
+  font-size: 1.5em;
+  width: 50%;
+  padding: 0;
+}
+.model-price li span {
+  display: inline-block;
+  position: relative;
+}
+.model-price li.old-price span {
+  padding: .3em 0;
+  background: url("../img/icons/old-price-icon.png") no-repeat;
+  background-size: contain;
+}
+.model-price li.current-price {
+  color: #da2536;
+}
+.model-price li.current-price strong {
+  font-size: 120%;
+}
+.model-price li.current-price span::before {
+  content: '';
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  background: url("../img/icons/current-price-icon.png") no-repeat center;
+  background-size: 100%;
+  left: -1.2em;
+  top: .1em;
 }
 
 /*# sourceMappingURL=style.css.map */

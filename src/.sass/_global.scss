@@ -125,9 +125,12 @@ a, button, input, textarea {
         outline: none !important;
     }
 }
+
+
 .bold{
-    font-family: 'LatoWebBold', sans-serif;
+    font-weight: 700;
 }
+
 .normal-section{
     padding: 3em 0;
     position: relative;
@@ -167,4 +170,40 @@ a, button, input, textarea {
         height: 1.2em;
         margin-top: .5em;
     }
+}
+
+//MY-BTN
+.collection-btn{
+    font-size: 1em;
+    height: 3em;
+    display: inline-flex;
+
+    color: white;
+    &:hover,
+    &:focus{
+        color: $gray-lighter;
+    }
+    border-radius: 0;
+    &.btn-clear{
+        background-color: transparent;
+        border-color: white;
+    }
+    &.btn-black{
+        background-color: #303030;
+        border-color: transparent;
+    }
+}
+//MY ICONS
+
+.icon-hz{
+    background: url("../img/icons/icon-btn-hz.png") no-repeat center;
+}
+.icon-search{
+    background: url("../img/icons/icon-btn-search.png") no-repeat center;
+}
+.icon-star{
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    background: url("../img/icons/icon-star.png") center no-repeat;
 }

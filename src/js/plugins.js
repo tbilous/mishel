@@ -22,3 +22,13 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+function thumbsBg() {
+    $(".photo-link").each(function () {
+        var imgID = this.href;
+        var parent = $(this).parents('.item-photo');
+        console.log(parent);
+        parent.css('backgroundImage', 'url(' + imgID + ')');
+    });
+}
+
+window.onload = thumbsBg;
