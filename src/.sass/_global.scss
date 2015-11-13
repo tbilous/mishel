@@ -1,3 +1,22 @@
+$form-border-color: rgba(0, 0, 0, .25);
+$form-input-color: rgba(171, 143, 131, .75);
+$input-text-color: #827066;
+$form-label-color: #767676;
+$red-price-color: #da2536;
+$collection-hover-bg: rgba(48, 48, 48, .6);
+//Ionicons
+
+@font-face {
+    font-family: "Ionicons";
+    src: url("../fonts/ionicons.eot?v=2.0.0");
+    src: url("../fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"),
+    url("../fonts/ionicons.ttf?v=2.0.0") format("truetype"),
+    url("../fonts/ionicons.woff?v=2.0.0") format("woff"),
+    url("../fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Webfont: Lato-Bold */
 //noinspection ALL
 @font-face {
@@ -10,6 +29,7 @@
     font-weight: 400;
     font-style: Italic;
 }
+
 @font-face {
     font-family: 'Playfair Display';
     src: url("../fonts/PlayfairDisplay-Italic.eot");
@@ -100,6 +120,7 @@ h2 {
         font-size: 16px;
     }
 }
+
 h4 {
     @media only screen and(max-width: $screen-md-min) {
         font-size: 14px;
@@ -126,15 +147,14 @@ a, button, input, textarea {
     }
 }
 
-
-.bold{
+.bold {
     font-weight: 700;
 }
 
-.normal-section{
+.normal-section {
     padding: 3em 0;
     position: relative;
-    &::before{
+    &::before {
         content: '';
         background: url("../img/section_shadov_top.png") center;
         width: 100%;
@@ -143,7 +163,7 @@ a, button, input, textarea {
         top: 0;
         background-size: cover;
     }
-    &::after{
+    &::after {
         content: '';
         background: url("../img/section_shadov_bottom.png") center;
         width: 100%;
@@ -162,7 +182,7 @@ a, button, input, textarea {
         font-size: 3em;
         margin: 0;
     }
-    .section-header-icon{
+    .section-header-icon {
         background: url("../img/icons/section-header_icon.png") center;
         background-size: cover;
         display: inline-block;
@@ -173,37 +193,75 @@ a, button, input, textarea {
 }
 
 //MY-BTN
-.collection-btn{
+.collection-btn {
     font-size: 1em;
     height: 3em;
-    display: inline-flex;
-
     color: white;
     &:hover,
-    &:focus{
+    &:focus {
         color: $gray-lighter;
     }
     border-radius: 0;
-    &.btn-clear{
+    &.btn-clear {
         background-color: transparent;
         border-color: white;
     }
-    &.btn-black{
+    &.btn-black {
         background-color: #303030;
         border-color: transparent;
     }
 }
+
 //MY ICONS
 
-.icon-hz{
+.icon-hz {
     background: url("../img/icons/icon-btn-hz.png") no-repeat center;
 }
-.icon-search{
+
+.icon-search {
     background: url("../img/icons/icon-btn-search.png") no-repeat center;
 }
-.icon-star{
+
+.icon-star {
     display: inline-block;
     width: 16px;
     height: 14px;
     background: url("../img/icons/icon-star.png") center no-repeat;
+}
+
+.icon-form {
+    display: inline-block;
+    background: url("../img/icons/form-line-icon.png") no-repeat center;
+    height: 4px;
+    width: 100%;
+}
+.body-form{
+    .i-icons{
+        position: relative;
+        &::before{
+            font-family: 'Ionicons';
+            position: absolute;
+            height: 40px;
+            width: 20px;
+            top: 0;
+            display: block;
+            font-size: 25px;
+            padding-top: 7px;
+            left: 7px;
+            color: #827066;
+        }
+        &.airplane::before{
+            content: '\f2c3';
+        }
+        &.person::before{
+            content: '\f213';
+            left: -30px;
+            padding-top: 4px;
+        }
+        &.telephone::before{
+            content: '\f4b9';
+            left: -30px;
+            padding-top: 4px;
+        }
+    }
 }

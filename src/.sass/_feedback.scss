@@ -1,0 +1,10 @@
+//BLOCK-5 Feedback
+.section-feedback {
+    min-height: 900px;
+    @media screen and (max-width: $screen-sm-max) {
+        background-image: url('../img/feedback-bg-lowres.jpg');
+    }
+    @media screen and (min-width: $screen-sm-min) {
+        background-image: url('../img/feedback-bg-hires.jpg');
+    }
+}
