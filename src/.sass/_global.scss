@@ -2,7 +2,8 @@ $form-border-color: rgba(0, 0, 0, .25);
 $form-input-color: rgba(171, 143, 131, .75);
 $input-text-color: #827066;
 $form-label-color: #767676;
-$red-price-color: #da2536;
+$red-color: #da2536;
+$red-color-2: $brand-danger;
 $collection-hover-bg: rgba(48, 48, 48, .6);
 //Ionicons
 
@@ -154,6 +155,8 @@ a, button, input, textarea {
 .normal-section {
     padding: 3em 0;
     position: relative;
+}
+.shadow-section{
     &::before {
         content: '';
         background: url("../img/section_shadov_top.png") center;
@@ -263,5 +266,18 @@ a, button, input, textarea {
             left: -30px;
             padding-top: 4px;
         }
+    }
+}
+
+.jagged-line {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: url("../img/jagged-line.png");
+    &.top {
+        top: 1.5em;
+    }
+    &.bottom {
+        bottom: 1em;
     }
 }

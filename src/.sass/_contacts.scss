@@ -1,0 +1,32 @@
+//BLOCK-6 Contacts
+.section-contacts {
+    .jagged-line {
+        &.top {
+            top: 1em;
+        }
+        &.bottom {
+            bottom: 1em;
+        }
+    }
+}
+.contact-block{
+    position: relative;
+    font-size: 1.7em;
+    max-width: 540px;
+    margin: 0 auto;
+    &::before{
+        position: absolute;
+        font-family: 'Ionicons';
+        color: $brand-danger;
+        width: 2em;
+        height: 2em;
+        top: 0;
+        left: -2em;
+    }
+    &.address, &.phone{
+        margin-bottom: 2em;
+    }
+    &.work-time::before{
+        content: '\f26e';
+    }
+}

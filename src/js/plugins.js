@@ -43,6 +43,4 @@ function thumbsBg() {
 }
 window.onload = thumbsBg;
 
-//window.onload = thumbsBg;
-
 

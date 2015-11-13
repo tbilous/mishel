@@ -1,10 +1,53 @@
 //BLOCK-5 Feedback
 .section-feedback {
+    padding-bottom: 0;
     min-height: 900px;
+    background-size: 100%;
+    background: no-repeat center;
     @media screen and (max-width: $screen-sm-max) {
         background-image: url('../img/feedback-bg-lowres.jpg');
     }
     @media screen and (min-width: $screen-sm-min) {
         background-image: url('../img/feedback-bg-hires.jpg');
+
     }
+    .feedback-wrapper{
+        margin-top: 5em;
+        padding-bottom: 3em;
+    }
+    .feedback-article{
+        position: relative;
+        padding-left: 5em;
+        min-height: 15em;
+        &::before{
+            content: '';
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            top: 0;
+            background-size: cover;
+            left: -1em;
+        }
+        &.ava1::before{
+            background-image: url("../img/ava1.png");
+        }
+        &.ava2::before{
+            background-image: url("../img/ava2.png");
+        }
+        &.ava3::before{
+            background-image: url("../img/ava3.png");
+        }
+        &.ava4::before{
+            background-image: url("../img/ava4.png");
+        }
+    }
+    .feedback-name{
+        color: $red-color;
+        font-weight: bold;
+        font-size: 2em;
+    }
+    .feedback-address{
+        color: #86878b;
+    }
+
 }
