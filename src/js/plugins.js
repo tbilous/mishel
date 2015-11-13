@@ -22,13 +22,27 @@
 }());
 
 // Place any jQuery/helper plugins in here.
-function thumbsBg() {
-    $(".photo-link").each(function () {
+/*function thumbsBg() {
+    $('.photo-link').each(function () {
         var imgID = this.href;
         var parent = $(this).parents('.item-photo');
-        console.log(parent);
         parent.css('backgroundImage', 'url(' + imgID + ')');
     });
+}*/
+function thumbsBg() {
+    $('.photo-link').each(function () {
+        var url = $(this).attr('href');
+        var parent = $(this).closest('.item-photo');
+        var img = new Image();
+        img.src = url;
+        img.style.display = 'none';
+        console.log(img.src);
+        document.body.appendChild(img);
+        parent.css('backgroundImage', 'url(' + url + ')');
+    });
 }
-
 window.onload = thumbsBg;
+
+//window.onload = thumbsBg;
+
+

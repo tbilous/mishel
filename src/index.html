@@ -85,10 +85,10 @@
     <div class="collection-menu text-center">
         <ul class="list-inline">
             <li>
-                <button>1</button>
+                <button class="all-collection" >1</button>
             </li>
             <li>
-                <button>2</button>
+                <button class="not-curvy-collection">2</button>
             </li>
             <li>
                 <button>3</button>
@@ -427,8 +427,98 @@
                 </div>
             </div>
             <div class=" col-sm-4 col-md-3">
-
+                <div class="collection-block not-curvy">
+                    <div class="item-photo">
+                        <div class="spacer"></div>
+                        <div class="photo-hover-block text-center">
+                            <div>
+                                <button class="btn collection-btn btn-black btn-header-action  start-modal"
+                                        data-toggle="modal"
+                                        data-target="#orderModal">ЗАКАЗАТЬ ПРИМЕРКУ
+                                </button>
+                            </div>
+                            <div class="collection-btn-group">
+                                <a class="photo-link btn collection-btn btn-clear icon-search" href="img/collection/m039.jpg"
+                                   data-lightbox="not-curvy"
+                                   data-title="Модель: 39, 3480грн"></a>
+                                <button class="btn collection-btn btn-clear icon-hz"></button>
+                            </div>
+                        <span class="star-line">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="item-review">
+                        <div class="model-name">
+                            <strong>Модель:</strong> 39
+                        </div>
+                        <div class="model-sizes">
+                            <strong>Размеры:</strong> 40; 42; 44; 46; 48; 50
+                        </div>
+                        <ul class="model-price list-inline">
+                            <li class="old-price text-left">
+                        <span>
+                            8400<small>грн</small>
+                        </span>
+                            <li class="current-price text-right">
+                        <span>
+                            <strong>3480</strong><small>грн</small>
+                        </span>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <div class=" col-sm-4 col-md-3">
+                <div class="collection-block not-curvy">
+                    <div class="item-photo">
+                        <div class="spacer"></div>
+                        <div class="photo-hover-block text-center">
+                            <div>
+                                <button class="btn collection-btn btn-black btn-header-action  start-modal"
+                                        data-toggle="modal"
+                                        data-target="#orderModal">ЗАКАЗАТЬ ПРИМЕРКУ
+                                </button>
+                            </div>
+                            <div class="collection-btn-group">
+                                <a class="photo-link btn collection-btn btn-clear icon-search" href="img/collection/m043.jpg"
+                                   data-lightbox="not-curvy"
+                                   data-title="Модель: 39, 3480грн"></a>
+                                <button class="btn collection-btn btn-clear icon-hz"></button>
+                            </div>
+                        <span class="star-line">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="item-review">
+                        <div class="model-name">
+                            <strong>Модель:</strong> 39
+                        </div>
+                        <div class="model-sizes">
+                            <strong>Размеры:</strong> 40; 42; 44; 46; 48; 50
+                        </div>
+                        <ul class="model-price list-inline">
+                            <li class="old-price text-left">
+                        <span>
+                            8400<small>грн</small>
+                        </span>
+                            <li class="current-price text-right">
+                        <span>
+                            <strong>3480</strong><small>грн</small>
+                        </span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
     </div>
@@ -484,7 +574,13 @@
         wrapAround: true
     })
 </script>
-
+<script>
+    $('.not-curvy-collection').click(function(){
+//        return $('.collection-block').fadeOut;
+       return $('.collection-block:visible').fadeOut(),
+       $('.collection-block').fadeIn();
+    });
+</script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <!--        <script>
