@@ -66,6 +66,9 @@
     }
     .spacer{
         padding-top: 33%;
+        @media (max-width: $screen-md-min) {
+            padding-top: 60%;
+        }
     }
     .map{
         iframe{
@@ -76,5 +79,7 @@
     }
 }
 .scrolloff {
-    pointer-events: none;
+    @media (min-width: $screen-md-min) {
+        pointer-events: none;
+    }
 }

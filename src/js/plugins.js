@@ -21,14 +21,6 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
-/*function thumbsBg() {
-    $('.photo-link').each(function () {
-        var imgID = this.href;
-        var parent = $(this).parents('.item-photo');
-        parent.css('backgroundImage', 'url(' + imgID + ')');
-    });
-}*/
 $(document).ready(function () {
     function thumbsBg() {
         $('.photo-link').each(function () {
@@ -44,15 +36,49 @@ $(document).ready(function () {
     }
     window.onload = thumbsBg;
 
+//Collection menu set active
+
+    $('.choose-collection').click(function(){
+        $('.choose-collection').removeClass("active");
+        $(this).addClass("active");
+    });
 
 
 //DEFEND  map iframe
+
     $('#map_canvas').addClass('scrolloff').mouseleave(function () {
-        $('#map_canvas1').addClass('scrolloff');
+        $('#map_canvas').addClass('scrolloff');
     });
+
     $('#canvas').on('click', function () {
-        $('#map_canvas1').removeClass('scrolloff');
+        $('#map_canvas').removeClass('scrolloff');
     });
+
+//MAIL FORM
+
+    $('form').submit(function () {
+        var formID = $(this).attr('id');
+        $.ajax({
+            type: 'POST',
+            url: 'mail.php', //mail script
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find('input').val('');
+            //alert('отработала' + ' - ' + formID);
+            $('#' + formID).trigger('reset');
+        });
+        //console.log($(this));
+        var parent = $(this).parents('.modal');
+        var modalID = parent.attr('id');
+
+        if ($('#' + modalID).hasClass('in')) {
+            $('#' + modalID).modal('hide');
+            return false;
+        } else {
+            return false;
+        }
+    });
+
 
 
 });

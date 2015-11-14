@@ -1,16 +1,65 @@
 //BLOCK3 collection
-
 .section-collection {
+    position: relative;
     background: url("../img/collection-bg.jpg");
+    padding-bottom: 0;
+    .gradient-wrapper{
+        // http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;0+0,1+100
+        @include filter-gradient(#ffffff, #ffffff, vertical); // IE6-9
+        @include background-image(linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%));
+    }
+    .collection-bottom-bg{
+        height: 5.4em;
+        background: #f7fbfa;
+    }
+}
+.collection-menu{
+    margin: 2em 0 2em;
+    li{
+        position: relative;
+        &::after{
+            content: '/';
+            position: absolute;
+            top: 0;
+            right: -.4em;
+        }
+        &:nth-last-child(1)::after{
+            display: none;
+        }
+    }
+/*    @media only screen and(max-width: $screen-sm-min) {
+        position: fixed;
+        top: 20%;
+        right: 0;
+        z-index: 2;
+        li{
+            text-shadow: 0 0 1px white;
+            font-size: 14px;
+            text-align: left;
+            padding: 1em 1em 5px;
+            display: block;
+            &::after{
+                display: none;
+            }
+        }
+    }*/
 }
 
+.choose-collection{
+    border: none;
+    background: none;
+    &.active{
+        color: $red-color-2;
+    }
+}
 .collection-wrapper {
     .collection-block {
         width: 100%;
         max-width: 19em;
         height: 37em;
         box-shadow: 0 0 0 1px $gray-lighter;
-        margin: 1.3em auto;
+        margin: 2.6em auto 0;
+        overflow: hidden;
         &:nth-last-of-type(1)::after {
             content: '';
             display: block;
@@ -24,6 +73,7 @@
 
 .item-review {
     padding: 1em;
+    background: #f8f8f8;
 }
 
 .item-photo {
