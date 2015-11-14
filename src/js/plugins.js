@@ -65,7 +65,7 @@ $(document).ready(function () {
         }).done(function () {
             $(this).find('input').val('');
             $('#' + formID).trigger('reset');
-            //return alert('form sent' + ' - ' + formID);
+            // alert('form sent' + ' - ' + formID);
         });
         var parent = $(this).parents('.modal');
         var modalID = parent.attr('id');
