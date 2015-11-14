@@ -16,7 +16,7 @@ var dirs = pkg['h5bp-configs'].directories;
 
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
-var mainStylesheet = 'styles';
+var mainStylesheet = 'style';
 
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
@@ -28,7 +28,7 @@ gulp.task('archive:create_archive_dir', function () {
 
 gulp.task('archive:zip', function (done) {
 
-    var archiveName = path.resolve(dirs.archive, pkg.name + '_v' + pkg.version + '.zip');
+    var archiveName = path.resolve(dirs.archive, pkg.name + '.zip');
     var archiver = require('archiver')('zip');
     var files = require('glob').sync('**/*.*', {
         'cwd': dirs.dist,
@@ -88,6 +88,8 @@ gulp.task('copy:.htaccess', function () {
 gulp.task('copy:index.html', function () {
     return gulp.src(dirs.src + '/index.html')
         .pipe(plugins.replace(/{{JQUERY_VERSION}}/g, pkg.devDependencies.jquery))
+        .pipe(plugins.replace(/{{MAIN_CSS_FILE}}/g, mainStylesheet + '.min.css'))
+        .pipe(plugins.replace(/{{CUT-START}}(.|\n)+?{{CUT-END}}/gm, ''))
         .pipe(gulp.dest(dirs.dist));
 });
 

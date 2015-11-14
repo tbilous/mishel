@@ -36,15 +36,15 @@ $(document).ready(function () {
     }
     window.onload = thumbsBg;
 
-//Collection menu set active
+    // Collection menu set active
 
-    $('.choose-collection').click(function(){
-        $('.choose-collection').removeClass("active");
-        $(this).addClass("active");
+    $('.choose-collection').click(function() {
+        $('.choose-collection').removeClass('active');
+        $(this).addClass('active');
     });
 
 
-//DEFEND  map iframe
+    // DEFEND  map iframe
 
     $('#map_canvas').addClass('scrolloff').mouseleave(function () {
         $('#map_canvas').addClass('scrolloff');
@@ -54,20 +54,19 @@ $(document).ready(function () {
         $('#map_canvas').removeClass('scrolloff');
     });
 
-//MAIL FORM
+    // MAIL FORM
 
     $('form').submit(function () {
         var formID = $(this).attr('id');
         $.ajax({
             type: 'POST',
-            url: 'mail.php', //mail script
+            url: 'mail.php',
             data: $(this).serialize()
         }).done(function () {
             $(this).find('input').val('');
-            //alert('отработала' + ' - ' + formID);
             $('#' + formID).trigger('reset');
+            //return alert('form sent' + ' - ' + formID);
         });
-        //console.log($(this));
         var parent = $(this).parents('.modal');
         var modalID = parent.attr('id');
 

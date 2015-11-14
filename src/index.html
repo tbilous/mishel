@@ -1,16 +1,30 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="ru-RU">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title></title>
-    <meta name="description" content="">
+    <meta name="description" content="Salon Mishel">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/ticons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/ticons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/ticons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/ticons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/ticons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/ticons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/ticons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/ticons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/ticons/apple-touch-icon-180x180.png" />
 
+    <meta name="msapplication-TileImage" content="img/tiles/metro-tile.png"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    {{CUT-START}}
     <link rel="stylesheet" href="css/style.css">
+    {{CUT-END}}
+
+    <link rel="stylesheet" href="css/{{MAIN_CSS_FILE}}">
     <!--<link rel="stylesheet" href="css/ionicons.min.css">-->
     <link rel="stylesheet" href="css/lightbox.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -1134,10 +1148,14 @@
     </div>
 </div>
 
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>-->
-<!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>-->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+{{CUT-START}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+{{CUT-END}}
 <script src="assets/js/lightbox-plus-jquery.min.js"></script>
 <script src="assets/js/modal.js"></script>
 <script src="assets/js/parallax.min.js"></script>
@@ -1154,13 +1172,13 @@
         $('.collection-block:visible').fadeOut();
         $('.collection-block').fadeIn();
     });
-    $('.not-curvy-collection').click(function () {
-        $('.collection-block:visible').fadeOut();
-        $('.not-curvy').fadeIn();
-    });
     $('.curvy-collection').click(function () {
         $('.collection-block:visible').fadeOut();
         $('.curvy').fadeIn();
+    });
+    $('.not-curvy-collection').click(function () {
+        $('.collection-block:visible').fadeOut();
+        $('.not-curvy').fadeIn();
     });
 </script>
 
