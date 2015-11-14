@@ -29,18 +29,33 @@
         parent.css('backgroundImage', 'url(' + imgID + ')');
     });
 }*/
-function thumbsBg() {
-    $('.photo-link').each(function () {
-        var url = $(this).attr('href');
-        var parent = $(this).closest('.item-photo');
-        var img = new Image();
-        img.src = url;
-        img.style.display = 'none';
-        console.log(img.src);
-        document.body.appendChild(img);
-        parent.css('backgroundImage', 'url(' + url + ')');
+$(document).ready(function () {
+    function thumbsBg() {
+        $('.photo-link').each(function () {
+            var url = $(this).attr('href');
+            var parent = $(this).closest('.item-photo');
+            var img = new Image();
+            img.src = url;
+            img.style.display = 'none';
+            console.log(img.src);
+            document.body.appendChild(img);
+            parent.css('backgroundImage', 'url(' + url + ')');
+        });
+    }
+    window.onload = thumbsBg;
+
+
+
+//DEFEND  map iframe
+    $('#map_canvas').addClass('scrolloff').mouseleave(function () {
+        $('#map_canvas1').addClass('scrolloff');
     });
-}
-window.onload = thumbsBg;
+    $('#canvas').on('click', function () {
+        $('#map_canvas1').removeClass('scrolloff');
+    });
+
+
+});
+
 
 

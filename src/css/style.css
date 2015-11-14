@@ -5666,11 +5666,43 @@ a:focus, a:active, button:focus, button:active, input:focus, input:active, texta
   color: #86878b;
 }
 
+.section-contacts {
+  background: url("../img/contacts-bg.jpg") no-repeat left 5%;
+  background-size: contain;
+}
 .section-contacts .jagged-line.top {
   top: 1em;
 }
 .section-contacts .jagged-line.bottom {
   bottom: 1em;
+}
+.section-contacts .start-modal {
+  box-shadow: 0 0 5px 0 #777777;
+}
+
+.contact-block-inset {
+  position: relative;
+}
+.contact-block-inset::before {
+  position: absolute;
+  font-family: 'Ionicons';
+  color: #da2468;
+  top: -.3em;
+  left: -1.3em;
+  font-size: 1.2em;
+}
+.contact-block-inset.work-time::before {
+  content: '\f26e';
+}
+.contact-block-inset.address::before {
+  content: '\f456';
+}
+.contact-block-inset.phone::before {
+  content: '\f4b9';
+}
+
+.section-header, .contact-block {
+  text-shadow: 0 0 5px white;
 }
 
 .contact-block {
@@ -5679,20 +5711,43 @@ a:focus, a:active, button:focus, button:active, input:focus, input:active, texta
   max-width: 540px;
   margin: 0 auto;
 }
-.contact-block::before {
-  position: absolute;
-  font-family: 'Ionicons';
-  color: #da2468;
-  width: 2em;
-  height: 2em;
-  top: 0;
-  left: -2em;
-}
 .contact-block.address, .contact-block.phone {
   margin-bottom: 2em;
 }
-.contact-block.work-time::before {
-  content: '\f26e';
+.contact-block.phone {
+  margin-bottom: 1em;
+}
+
+.map-wrapper {
+  position: relative;
+}
+.map-wrapper::before {
+  content: '';
+  position: absolute;
+  background: url("../img/contacts-shadow.png") center top no-repeat;
+  background-size: contain;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.9em;
+  z-index: 2;
+}
+.map-wrapper .spacer {
+  padding-top: 33%;
+}
+.map-wrapper .map iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.scrolloff {
+  pointer-events: none;
+}
+
+.footer {
+  position: relative;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

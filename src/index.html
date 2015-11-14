@@ -1037,27 +1037,70 @@
     <div class="jagged-line top"></div>
     <div class="jagged-line bottom"></div>
     <div class="container">
-        <div class="section-header-block normal-section">
+        <div class="section-header-block">
             <h2 class="section-header">Контакты</h2>
             <span class="section-header-icon"></span>
         </div>
-        <div class="contact-wrapper text-center">
+        <div class="contact-wrapper text-center address">
             <div class="address contact-block">
-                Магазин-склад "Мишель"  м. Голосеевская
-               <span class="text-nowrap"> г. Киев, пр. Голосеевский, 70</span>
-               <span class="text-nowrap"> отель "Мир" 5 этаж.</span>
+                <span class="contact-block-inset address">
+                    <span>Магазин-склад "Мишель"  м. Голосеевская</span>
+                   <span class="text-nowrap"> г. Киев, пр. Голосеевский, 70</span>
+                   <span class="text-nowrap"> отель "Мир" 5 этаж.</span>
+                </span>
             </div>
 
             <div class="work-time contact-block">
-                Режим работы: без выходных
-                по предварительной записи
+                <span class="contact-block-inset work-time">
+                    <span>Режим работы: без выходных</span>
+                    <span>по предварительной записи</span>
+                </span>
             </div>
             <div class="phone contact-block">
-                (098) 953-55-77 | (093) 803-55-77
+                <span class="contact-block-inset phone">
+                     <span>(098) 953-55-77 | (093) 803-55-77</span>
+                </span>
             </div>
+            <button class="btn btn-lg btn-danger  start-modal" data-toggle="modal"
+                    data-target="#orderModal">Заказать бесплатный звонок
+            </button>
         </div>
     </div>
 </div>
+<div class="map-wrapper">
+    <div class="map" id="canvas">
+        <iframe id="map_canvas"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1764.093491365546!2d30.509386849899013!3d50.398143017599715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8cb1b60dcd1%3A0x60b75064e44f5e2e!2z0L_RgNC-0YHQvy4g0JPQvtC70L7RgdGW0ZfQstGB0YzQutC40LksIDcwLCDQmtC40ZfQsg!5e0!3m2!1suk!2sua!4v1447499084886"
+            allowfullscreen></iframe>
+        <div class="spacer">
+
+        </div>
+    </div>
+</div>
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <ul class="list-inline list-unstyled footer-social">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+            <div class="col-xs-6">
+                <div class="footer-phone-contacts">
+                    <span>
+                        098) 953-55-77 <br/>
+                        (093) 803-55-77
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="f-copyright text-center">
+            Copyright 2015 <span><strong>Empire Of Marketing.</strong></span> All Rights Reserved.
+        </div>
+    </div>
+</footer>
 <!-- Add your site or application content here -->
 <p>Hello world! This is HTML5 Boilerplate.</p>
 <button class="btn btn-lg btn-primary btn-header-action my-btn-lg start-modal" data-toggle="modal"
