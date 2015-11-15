@@ -36,6 +36,26 @@ $(document).ready(function () {
     }
     window.onload = thumbsBg;
 
+    // SCROLL TO ANCHOR
+    function scrollIfAnchor(href) {
+        href = typeof(href) === 'string' ? href : $(this).attr('href');
+        var fromTop = 50;
+        if (href.indexOf('#') === 0) {
+            var $target = $(href);
+            if ($target.length) {
+                var time = 1000;
+                $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, time);
+                if (history && 'pushState' in history) {
+                    history.pushState({ }, document.title, window.location.pathname + href);
+                    return false;
+                }
+            }
+        }
+    }
+
+    $('body').on('click', '.anchor', scrollIfAnchor);
+
+
     // Collection menu set active
 
     $('.choose-collection').click(function() {

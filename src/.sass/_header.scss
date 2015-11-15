@@ -1,0 +1,158 @@
+//BLOCK-1 Header
+.header {
+    position: relative;
+    overflow: hidden;
+    min-height: 724px;
+    //background: url("../img/header-bg.png") no-repeat center;
+    .header-phone-contacts, .main-header-block, h5 {
+        color: white;
+    }
+
+}
+
+.h-layer-1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("../img/header-layer-1-hires.jpg") center top no-repeat;
+    z-index: -101;
+}
+
+.nav-lg {
+    display: inline-block;
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+    margin-left: -291px;
+    width: 582px;
+    li {
+        padding: 0;
+        a {
+            img {
+                opacity: 0;
+            }
+        }
+        &:nth-child(1) {
+            background: url("../img/nav/nav1.png") center no-repeat;
+            &:hover,
+            &:focus,
+            &:active {
+                background: url("../img/nav/nav1-a.png") center no-repeat;
+            }
+        }
+        &:nth-child(2) {
+            background: url("../img/nav/nav2.png") center no-repeat;
+            &:hover,
+            &:focus,
+            &:active {
+                background: url("../img/nav/nav2-a.png") center no-repeat;
+            }
+        }
+        &:nth-child(3) {
+            background: url("../img/nav/nav3.png") center no-repeat;
+            &:hover,
+            &:focus,
+            &:active {
+                background: url("../img/nav/nav3-a.png") center no-repeat;
+            }
+        }
+        &:nth-child(4) {
+            background: url("../img/nav/nav4.png") center no-repeat;
+            &:hover,
+            &:focus,
+            &:active {
+                background: url("../img/nav/nav4-a.png") center no-repeat;
+            }
+        }
+        &:nth-child(5) {
+            background: url("../img/nav/nav5.png") center no-repeat;
+            &:hover,
+            &:focus,
+            &:active {
+                background: url("../img/nav/nav5-a.png") center no-repeat;
+            }
+        }
+    }
+}
+
+.layer {
+    width: 1380px;
+    height: 725px;
+    background: url("../img/header-bg.png") no-repeat center;
+    position: absolute;
+    left: 50%;
+    margin-left: -690px;
+}
+
+.body-form {
+    &.form-discount {
+        position: absolute;
+        max-width: 295px;
+        top: 30%;
+        right: 5%;
+        label {
+            font-size: 11px;
+        }
+        .i-icons {
+            &.airplane {
+                margin-top: 1.8em;
+            }
+        }
+        .sub-heading {
+            font-size: 1.4em;
+        }
+    }
+}
+
+.header-phone-contacts {
+    position: absolute;
+    top: 5px;
+    right: 15%;
+    font-size: 120%;
+    .i-icons::before {
+        top: -.35em;
+        display: block;
+        padding-top: 0;
+        color: white;
+        font-size: 1.4em;
+    }
+    .btn-block {
+        margin-top: .5em;
+    }
+    .header-social {
+        margin-top: 1em;
+    }
+}
+
+
+.main-header-block {
+    font-family: 'Playfair Display', sans-serif;
+    margin-top: 2em;
+    h1 {
+        font-size: 4em;
+        margin: 0;
+    }
+    h2 {
+        margin-top: .2em;
+    }
+}
+.logo{
+    &.header-logo{
+        left: 5%;
+        top: 5px;
+    }
+    .logo-layer{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("../img/logo-layer.png") no-repeat center;
+        background-size: 100%;
+        z-index: -1;
+    }
+    .logo-body{
+        background: url("../img/logo-body.png") no-repeat center;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+    }
+}

@@ -281,3 +281,28 @@ a, button, input, textarea {
         bottom: 1em;
     }
 }
+
+//SOCIAL
+.social-block{
+    .social-icon{
+        display: block;
+        width: 2.36em;
+        height: 2.36em;
+        &.i-icon{
+            background: url("../img/icons/i-icon.png") no-repeat center;
+            background-size: 100%;
+        }
+        &.vk-icon{
+            background: url("../img/icons/vk-icon.png") no-repeat center;
+            background-size: 100%;
+        }
+        &.fb-icon{
+            background: url("../img/icons/fb-icon.png") no-repeat center;
+            background-size: 100%;
+        }
+    }
+}
+//Preloaded img
+.preload{
+    display: none;
+}

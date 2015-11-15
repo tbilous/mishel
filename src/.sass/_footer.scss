@@ -1,33 +1,41 @@
-.footer{
+//BlOCK7 - Footer
+.footer {
     position: relative;
     color: white;
     padding: 8em 0 1em;
     background: url("../img/footer-bg.jpg") no-repeat center;
-    .footer-phone-contacts{
+    background-size: cover;
+    .footer-phone-contacts {
         text-align: right;
+        font-size: 120%;
     }
-    .logo-footer{
-        position: absolute;
+
+    .i-icons::before {
+        top: -.35em;
+        display: block;
+        padding-top: 0;
+        color: white;
+        font-size: 1.4em;
+    }
+}
+
+.logo {
+    position: absolute;
+    width: 19em;
+    height: 19em;
+    background-size: cover;
+    &.logo-footer {
         top: -9.5em;
-        width: 19em;
-        height: 19em;
         left: 50%;
         margin-left: -9.5em;
         background: url("../img/logo-footer.png");
         background-size: cover;
         @media only screen and(max-width: $screen-md-min) {
-            width: 10em;
-            height: 10em;
             margin-left: -5em;
             top: -1em;
+            width: 10em;
+            height: 10em;
         }
     }
-    .i-icons::before {
 
-        top: -.5em;
-        display: block;
-        font-size: 25px;
-        padding-top: 0;
-        color: white;
-    }
 }
