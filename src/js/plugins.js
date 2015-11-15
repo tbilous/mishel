@@ -29,7 +29,7 @@ $(document).ready(function () {
             var img = new Image();
             img.src = url;
             img.style.display = 'none';
-            console.log(img.src);
+            // console.log(img.src);
             document.body.appendChild(img);
             parent.css('backgroundImage', 'url(' + url + ')');
         });
@@ -46,12 +46,19 @@ $(document).ready(function () {
 
     // DEFEND  map iframe
 
-    $('#map_canvas').addClass('scrolloff').mouseleave(function () {
-        $('#map_canvas').addClass('scrolloff');
+    $('#canvas').addClass('scrolloff');
+
+    $('#overlay').on('mouseup', function() {
+        $('#map').addClass('scrolloff');
     });
 
-    $('#canvas').on('click', function () {
-        $('#map_canvas').removeClass('scrolloff');
+    $('#overlay').on('mousedown', function() {
+        $('#map').removeClass('scrolloff');
+    });
+
+    $('#map').mouseleave(function () {
+        $('#map').addClass('scrolloff');
+
     });
 
     // MAIL FORM
