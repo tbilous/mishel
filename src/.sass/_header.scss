@@ -2,8 +2,7 @@
 .header {
     position: relative;
     overflow: hidden;
-    min-height: 52em;
-    //background: url("../img/header-bg.png") no-repeat center;
+    min-height: 724px;
     .header-phone-contacts, .main-header-block, h5 {
         color: white;
     }
@@ -16,6 +15,7 @@
         }
     }
     @media (max-width: $screen-sm-min) {
+        min-height: 40em;
         background: url("../img/header-bg-lowres.jpg") no-repeat center;
     }
 
@@ -81,8 +81,8 @@
 
 .layer {
     width: 1380px;
-    height: 725px;
-    background: url("../img/header-bg.png") no-repeat center;
+    height: 101%;
+    background: url("../img/header-bg2.png") no-repeat center;
     position: absolute;
     left: 50%;
     margin-left: -690px;
@@ -136,6 +136,10 @@
         }
         .sub-heading {
             font-size: 1.4em;
+        }
+        .submit-wrapper{
+            margin-top: 1.5em;
+            padding: 5px 0 0 ;
         }
         @media (max-width: $screen-lg-desktop) {
             top: 5px;
