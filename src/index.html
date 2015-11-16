@@ -21,15 +21,11 @@
     <meta name="msapplication-TileImage" content="img/tiles/metro-tile.png"/>
     <meta name="msapplication-TileColor" content="#ffffff"/>
 
-    <!--{{CUT-START}}-->
+
     <link rel="stylesheet" href="css/style.css">
-    <!--{{CUT-END}}-->
 
 
-    <link rel="stylesheet" href="css/{{MAIN_CSS_FILE}}">
 
-
-    <!--<link rel="stylesheet" href="css/lightbox.css">-->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
@@ -38,13 +34,34 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
+<nav class="navbar navbar-default visible-sm visible-xs navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav text-left">
+                <li class="active"><a href="#home">О нас</a>
+                <li><a class="anchor" href="#advantages">Наши преимущества</a>
+                <li><a class="anchor" href="#collection">Наши коллекции</a>
+                <li><a class="anchor" href="#feedback">Отзывы</a>
+                <li><a class="anchor" href="#contacts">Контакты</a>
+            </ul>
+        </div>
+    </div>
+</nav>
 <header class="header text-center" id="home">
     <div class="h-layer-1"></div>
     <div class="layer layer-1"></div>
 
-    <h5>Напрямую от производителя, без посредников и торговых накруток!</h5>
-
     <div class="main-header-block">
+        <h5>Напрямую от производителя, без посредников и торговых накруток!</h5>
         <h1>Свадебный салон "Мишель"</h1>
 
         <h2>только лучшие свадебные платья!</h2>
@@ -115,28 +132,7 @@
     </nav>
 
 </header>
-<nav class="navbar navbar-default visible-sm visible-xs">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav text-left">
-                <li class="active"><a href="#home">О нас</a>
-                <li><a class="anchor" href="#advantages">Наши преимущества</a>
-                <li><a class="anchor" href="#collection">Наши коллекции</a>
-                <li><a class="anchor" href="#feedback">Отзывы</a>
-                <li><a class="anchor" href="#contacts">Контакты</a>
-            </ul>
-        </div>
-    </div>
-</nav>
+
 <section id="advantages" class="section-advantages normal-section shadow-section parallax-window" data-parallax="scroll"
          data-image-src="img/advantages-bg-parallax.jpg">
     <div class="jagged-line top"></div>
@@ -1888,30 +1884,36 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
 
 
-<!--{{CUT-START}}-->
 
+<!--{{CUT-START}}-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-<!--{{CUT-END}}-->
-
-
-<script src="assets/js/lightbox-plus-jquery.min.js"></script>
-<script src="assets/js/parallax.min.js"></script>
-<script src="assets/js/moment.min.js"></script>
-<script src="assets/js/flipclock.js"></script>
-
 <script src="assets/js/transition.js"></script>
 <script src="assets/js/modal.js"></script>
-
 <script src="assets/js/collapse.js"></script>
+<!--{{CUT-END}}-->
+<script src="js/{{MAIN_JS_FILE}}"></script>
+<script src="js/vendor/lightbox-plus-jquery.min.js"></script>
+<script src="js/vendor/parallax.min.js"></script>
+<script src="js/vendor/moment.min.js"></script>
+<script src="js/vendor/flipclock.min.js"></script>
+
+
+
 
 <script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-<!--<script>
-    $(document).ready(function() {
-        $(".dropdown-toggle").dropdown();
+
+<script>
+    var tomorrow = moment().endOf('day').valueOf() + 1;
+    var now = moment().valueOf();
+    var interval = (tomorrow - now) / 1000;
+    var clock = $('#top-clock').FlipClock(interval, {
+        clockFace: 'HourlyCounter',
+        countdown: true,
+        language: 'ru'
     });
-</script>-->
+
+</script>
 <script>
     lightbox.option({
         showImageNumberLabel: false,
@@ -1919,28 +1921,7 @@
         wrapAround: true
     })
 </script>
-<script>
-    $('.all-collection').click(function () {
-        $('.collection-block:visible').fadeOut();
-        $('.collection-block').fadeIn();
-    });
-    $('.curvy-collection').click(function () {
-        $('.collection-block:visible').fadeOut();
-        $('.curvy').fadeIn();
-    });
-    $('.not-curvy-collection').click(function () {
-        $('.collection-block:visible').fadeOut();
-        $('.not-curvy').fadeIn();
-    });
-    $('.offers-collection').click(function () {
-        $('.collection-block:visible').fadeOut();
-        $('.offers').fadeIn();
-    });
-    $('.accessories-collection').click(function () {
-        $('.collection-block:visible').fadeOut();
-        $('.accessories').fadeIn();
-    });
-</script>
+
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <!--        <script>

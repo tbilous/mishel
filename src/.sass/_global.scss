@@ -28,7 +28,7 @@ $collection-hover-bg: rgba(48, 48, 48, .6);
     url('../fonts/PlayfairDisplay-Regular.woff') format('woff'),
     url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype');
     font-weight: 400;
-    font-style: Italic;
+    font-style: normal;
 }
 
 @font-face {
@@ -39,32 +39,6 @@ $collection-hover-bg: rgba(48, 48, 48, .6);
     font-style: Italic;
 }
 
-//noinspection ALL
-@font-face {
-    font-family: 'LatoWebBold';
-    src: url('../fonts/Lato-Bold.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/Lato-Bold.woff2') format('woff2'), /* Modern Browsers */
-    url('../fonts/Lato-Bold.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/Lato-Bold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
-
-/* Webfont: Lato-Light */
-//noinspection ALL
-@font-face {
-    font-family: 'LatoWebLight';
-    src: url('../fonts/Lato-Light.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/Lato-Light.woff2') format('woff2'), /* Modern Browsers */
-    url('../fonts/Lato-Light.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/Lato-Light.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
 
 //noinspection ALL
 /* Webfont: Lato-Regular */
@@ -81,19 +55,6 @@ $collection-hover-bg: rgba(48, 48, 48, .6);
     text-rendering: optimizeLegibility;
 }
 
-/* Webfont: Lato-Semibold */
-//noinspection ALL
-@font-face {
-    font-family: 'LatoWebSemibold';
-    src: url('../fonts/Lato-Semibold.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/Lato-Semibold.woff2') format('woff2'), /* Modern Browsers */
-    url('../fonts/Lato-Semibold.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/Lato-Semibold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
 
 body {
     font-family: $font-family-base;

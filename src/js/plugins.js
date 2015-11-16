@@ -105,16 +105,27 @@ $(document).ready(function () {
         }
     });
 
-//COUNTER
-    var tomorrow = moment().endOf('day').valueOf() + 1;
-    var now = moment().valueOf();
-    var interval = (tomorrow - now) / 1000;
-    var clock = $('#top-clock').FlipClock(interval, {
-        clockFace: 'HourlyCounter',
-        countdown: true,
-        language: 'ru'
+    // Collection group buttons
+    $('.all-collection').click(function () {
+        $('.collection-block:visible').fadeOut();
+        $('.collection-block').fadeIn();
     });
-
+    $('.curvy-collection').click(function () {
+        $('.collection-block:visible').fadeOut();
+        $('.curvy').fadeIn();
+    });
+    $('.not-curvy-collection').click(function () {
+        $('.collection-block:visible').fadeOut();
+        $('.not-curvy').fadeIn();
+    });
+    $('.offers-collection').click(function () {
+        $('.collection-block:visible').fadeOut();
+        $('.offers').fadeIn();
+    });
+    $('.accessories-collection').click(function () {
+        $('.collection-block:visible').fadeOut();
+        $('.accessories').fadeIn();
+    });
 });
 
 

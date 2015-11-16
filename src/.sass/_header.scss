@@ -9,7 +9,7 @@
     @media (max-width: $screen-lg-desktop) {
         h1,
         h2,
-        h5{
+        h5 {
             text-align: left;
             padding-left: 5%;
         }
@@ -20,7 +20,6 @@
     }
 
 }
-
 
 .nav-lg {
     display: inline-block;
@@ -98,9 +97,12 @@
         background: url("../img/header-layer-1-lowres.jpg") center top no-repeat;
     }
 }
+
 .main-header-block {
     font-family: 'Playfair Display', sans-serif;
-    margin-top: 2em;
+    h5 {
+        margin-bottom: 2em;
+    }
     h1 {
         font-size: 4em;
         margin: 0;
@@ -110,14 +112,17 @@
     }
 
 }
+
 @media (max-width: $screen-sm-min) {
-    .layer, .h-layer-1{
+    .layer, .h-layer-1 {
         display: none;
     }
-    .main-header-block{
-        margin-top: 30%;
-    }
 
+}
+@media (max-width: $screen-md-min) {
+    .main-header-block {
+        margin-top: 25%;
+    }
 }
 
 .body-form {
@@ -137,9 +142,9 @@
         .sub-heading {
             font-size: 1.4em;
         }
-        .submit-wrapper{
+        .submit-wrapper {
             margin-top: 1.5em;
-            padding: 5px 0 0 ;
+            padding: 5px 0 0;
         }
         @media (max-width: $screen-lg-desktop) {
             top: 5px;
@@ -149,7 +154,6 @@
             display: none;
         }
     }
-
 
 }
 
@@ -173,14 +177,12 @@
     }
 }
 
-
-
-.logo{
-    &.header-logo{
+.logo {
+    &.header-logo {
         left: 5%;
         top: 5px;
     }
-    .logo-layer{
+    .logo-layer {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -188,14 +190,15 @@
         background-size: 100%;
         z-index: -1;
     }
-    .logo-body{
+    .logo-body {
         background: url("../img/logo-body.png") no-repeat center;
         width: 100%;
         height: 100%;
         background-size: 100%;
     }
 }
-.navbar-default{
+
+.navbar-default {
     border-radius: 0;
     margin-bottom: 0;
 }
