@@ -2,7 +2,7 @@
 .section-action{
     background: #e4ebe8 url("../img/action-bg.jpg") -6% bottom no-repeat;
     padding: 3em 0;
-    @media all and (max-width: $screen-sm-min) {
+    @media all and (max-width: $screen-xs-min) {
         background: #e4ebe8;
         padding-top: 2em;
     }

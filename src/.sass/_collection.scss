@@ -62,7 +62,7 @@
         box-shadow: 0 0 0 1px $gray-lighter;
         margin: 2.6em auto 0;
         overflow: hidden;
-        @media only screen and(max-width: $screen-lg-min) and (min-width: $screen-md-min) {
+        @media only screen and(max-width: $screen-lg-min) {
             height: auto;
         }
 
