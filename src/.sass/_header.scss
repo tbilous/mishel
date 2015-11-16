@@ -2,21 +2,25 @@
 .header {
     position: relative;
     overflow: hidden;
-    min-height: 724px;
+    min-height: 52em;
     //background: url("../img/header-bg.png") no-repeat center;
     .header-phone-contacts, .main-header-block, h5 {
         color: white;
     }
+    @media (max-width: $screen-lg-desktop) {
+        h1,
+        h2,
+        h5{
+            text-align: left;
+            padding-left: 5%;
+        }
+    }
+    @media (max-width: $screen-sm-min) {
+        background: url("../img/header-bg-lowres.jpg") no-repeat center;
+    }
 
 }
 
-.h-layer-1 {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: url("../img/header-layer-1-hires.jpg") center top no-repeat;
-    z-index: -101;
-}
 
 .nav-lg {
     display: inline-block;
@@ -84,6 +88,38 @@
     margin-left: -690px;
 }
 
+.h-layer-1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("../img/header-layer-1-hires.jpg") center top no-repeat;
+    z-index: -101;
+    @media only screen and(max-width: $screen-md-min) {
+        background: url("../img/header-layer-1-lowres.jpg") center top no-repeat;
+    }
+}
+.main-header-block {
+    font-family: 'Playfair Display', sans-serif;
+    margin-top: 2em;
+    h1 {
+        font-size: 4em;
+        margin: 0;
+    }
+    h2 {
+        margin-top: .2em;
+    }
+
+}
+@media (max-width: $screen-sm-min) {
+    .layer, .h-layer-1{
+        display: none;
+    }
+    .main-header-block{
+        margin-top: 30%;
+    }
+
+}
+
 .body-form {
     &.form-discount {
         position: absolute;
@@ -101,13 +137,22 @@
         .sub-heading {
             font-size: 1.4em;
         }
+        @media (max-width: $screen-lg-desktop) {
+            top: 5px;
+            right: 5px;
+        }
+        @media only screen and(max-width: $screen-sm-min) {
+            display: none;
+        }
     }
+
+
 }
 
 .header-phone-contacts {
     position: absolute;
     top: 5px;
-    right: 15%;
+    right: 11%;
     font-size: 120%;
     .i-icons::before {
         top: -.35em;
@@ -125,17 +170,7 @@
 }
 
 
-.main-header-block {
-    font-family: 'Playfair Display', sans-serif;
-    margin-top: 2em;
-    h1 {
-        font-size: 4em;
-        margin: 0;
-    }
-    h2 {
-        margin-top: .2em;
-    }
-}
+
 .logo{
     &.header-logo{
         left: 5%;
@@ -155,4 +190,8 @@
         height: 100%;
         background-size: 100%;
     }
+}
+.navbar-default{
+    border-radius: 0;
+    margin-bottom: 0;
 }
