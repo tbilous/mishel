@@ -32,6 +32,9 @@ $(document).ready(function () {
             // console.log(img.src);
             document.body.appendChild(img);
             parent.css('backgroundImage', 'url(' + url + ')');
+
+            // add defend  map
+            $('#canvas').addClass('scrolloff');
         });
     }
     window.onload = thumbsBg;
@@ -66,7 +69,7 @@ $(document).ready(function () {
 
     // DEFEND  map iframe
 
-    $('#canvas').addClass('scrolloff');
+
 
     $('#overlay').on('mouseup', function() {
         $('#map').addClass('scrolloff');

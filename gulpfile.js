@@ -143,13 +143,13 @@ gulp.task('copy:uglify', function() {
 });
 
 gulp.task('copy:images', function() {
-    return gulp.src(dirs.src + '/img/**/*.{ gif,jpg,png}')
+    return gulp.src(dirs.src + '/img/**/*.{gif,jpg,png}')
         .pipe(imagemin({
             progressive: true,
             interlaced: true,
             svgoPlugins: [{ removeViewBox:false }, { removeUselessStrokeAndFill:false }]
         }))
-        .pipe(gulp.dest('dist' + '/img/'));
+        .pipe(gulp.dest('dist' + '/img'));
 });
 
 gulp.task('copy:misc', function () {

@@ -72,11 +72,27 @@
         background: url("../img/input-bg.png");
     }
     input[type='submit']{
-        height: 3.4em;
-        width: 77%;
-        background: url("../img/form-btn-bg.png") center no-repeat;
+        height: 40px;
+        width: 100%;
+        //background: url("../img/form-btn-bg.png") center no-repeat;
         background-size: contain;
-        border: none;
+        //border: none;
+        border-radius: 6px;
+        box-shadow: 0 0 4px 1px $gray-light;
+        //background-color: $brand-danger;
+        // Needs latest Compass, add '@import "compass"' to your scss
+        // Permalink - use to edit and share this gradient:
+        // http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+0,0.65+100
+        @include filter-gradient(#000000, #000000, vertical); // IE6-9
+        @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%));
+        &:hover{
+            // Needs latest Compass, add '@import "compass"' to your scss
+            // Permalink - use to edit and share this gradient:
+            // http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.65+0,0+100;Neutral+Density
+            @include filter-gradient(#000000, #000000, vertical); // IE6-9
+            @include background-image(linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%));
+            color: rgba(218, 173, 147, 0.8);
+        }
     }
 
     label, .input[type='submit']{

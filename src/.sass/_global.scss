@@ -8,7 +8,7 @@ $collection-hover-bg: rgba(48, 48, 48, .6);
 //Ionicons
 
 @font-face {
-    font-family: "Ionicons";
+    font-family: 'Ionicons';
     src: url("../fonts/ionicons.eot?v=2.0.0");
     src: url("../fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"),
     url("../fonts/ionicons.ttf?v=2.0.0") format("truetype"),
@@ -166,9 +166,17 @@ a, button, input, textarea {
         color: $gray-lighter;
     }
     border-radius: 0;
-    &.btn-clear {
+    &.icon-search {
         background-color: transparent;
-        border-color: white;
+        border: none;
+        display: block;
+        width: 2em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 2em;
+        font-size: 2.5em;
+
     }
     &.btn-black {
         background-color: #303030;
@@ -183,7 +191,16 @@ a, button, input, textarea {
 }
 
 .icon-search {
-    background: url("../img/icons/icon-btn-search.png") no-repeat center;
+    //background: url("../img/icons/icon-btn-search.png") no-repeat center;
+    &::before{
+        content: '\f4a4';
+        font-family:'Ionicons';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: white;
+        right: 0;
+    }
 }
 
 .icon-star {
@@ -216,6 +233,8 @@ a, button, input, textarea {
         }
         &.airplane::before{
             content: '\f2c3';
+            left: -30px;
+            padding-top: 4px;
         }
         &.person::before{
             content: '\f213';
